@@ -4,7 +4,7 @@ Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-912
 Web and Android developer
 -------------------------
 
-* 🌍  I'm based in Pune
+* 🌍  I'm based in India
 * ✉️  You can contact me at [kartikpatilnp@gmail.com](mailto:kartikpatilnp@gmail.com)
 * 🚀  I'm currently working on [Notefreze](http://play.google.com/store/apps/details?id=com.notefreze)
 * 🧠  I'm learning React Native

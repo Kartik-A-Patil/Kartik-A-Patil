@@ -1,5 +1,5 @@
 # 💫 About Me:
-🔭 I’m currently working on NoteFreze And WebLab<br>🌱 I’m currently learning TypeScript<br>⚡ I Love to work on Unique and problem solving Ideas
+🔭 I’m currently working on NoteFreze And WebLab<br>🌱 I’m currently learning TypeScript & Java <br>⚡ I Love to work on Unique and problem solving Ideas
 
 
 ## 🌐 Socials:

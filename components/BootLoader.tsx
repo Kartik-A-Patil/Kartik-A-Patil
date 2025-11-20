@@ -20,13 +20,13 @@ export const BootLoader = ({ onComplete }: { onComplete: () => void }) => {
       const timeout = setTimeout(() => {
         setLines(prev => [...prev, bootSequence[currentIndex]]);
         setCurrentIndex(prev => prev + 1);
-      }, Math.random() * 300 + 100); // Random delay between 100ms and 400ms
+      }, Math.random() * 200 + 50); // Random delay between 50ms and 250ms
 
       return () => clearTimeout(timeout);
     } else {
       const timeout = setTimeout(() => {
         onComplete();
-      }, 800);
+      }, 500);
       return () => clearTimeout(timeout);
     }
   }, [currentIndex, onComplete]);

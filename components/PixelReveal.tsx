@@ -12,10 +12,11 @@ export const PixelReveal = ({
   children, 
   pixelSize = 40, 
   delay = 0,
-  className = "" 
+  className = "" ,
+  
 }: PixelRevealProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(containerRef, { once: true, amount: 0.2 });
+  const isInView = useInView(containerRef, { once: true, amount: 0, margin: "100px" });
   const [pixels, setPixels] = useState<{ id: number; x: number; y: number }[]>([]);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
@@ -53,7 +54,7 @@ export const PixelReveal = ({
 
   return (
     <div ref={containerRef} className={`relative overflow-hidden ${className}`}>
-      <div className={`${isInView ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
+      <div className="opacity-100">
         {children}
       </div>
       
@@ -65,8 +66,8 @@ export const PixelReveal = ({
             initial={{ opacity: 1 }}
             animate={isInView ? { opacity: 0 } : { opacity: 1 }}
             transition={{ 
-              duration: 0.4, 
-              delay: delay + Math.random() * 0.5,
+              duration: 0.2, 
+              delay: delay + Math.random() * 0.1,
               ease: "easeOut" 
             }}
             style={{

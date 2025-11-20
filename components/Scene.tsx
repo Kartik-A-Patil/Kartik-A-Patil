@@ -96,7 +96,7 @@ export const Scene = () => {
 
   useEffect(() => {
     if (step >= SEQUENCE.length) {
-        const timer = setTimeout(() => setShowGlobe(true), 1000);
+        const timer = setTimeout(() => setShowGlobe(true), 400);
         return () => clearTimeout(timer);
     }
 
@@ -115,14 +115,14 @@ export const Scene = () => {
             setLogs(prev => [...prev, { id: Date.now(), type: 'command', text: action.text }]);
             setCurrentText('');
             setStep(s => s + 1);
-          }, 400);
+          }, 100);
         }
-      }, 50);
+      }, 25);
     } else {
       timeout = setTimeout(() => {
         setLogs(prev => [...prev, { id: Date.now(), type: 'output', text: action.text }]);
         setStep(s => s + 1);
-      }, 600);
+      }, 250);
     }
 
     return () => {
@@ -150,7 +150,7 @@ export const Scene = () => {
             </div>
             <Canvas className="w-full h-full">
                 <PerspectiveCamera makeDefault position={[0, 0, 6]} />
-                <ambientLight intensity={0.5} />
+                <ambientLight intensity={1} />
                 <RotatingShape />
                 <GridFloor />
                 <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.5} />
